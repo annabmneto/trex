@@ -53,7 +53,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(600, 200);
+  createCanvas(windowWidth, windowHeight);
   
   trex = createSprite(50,180,20,50);
   trex.addAnimation("running", trex_correndo);
@@ -100,7 +100,7 @@ if (estadojogo===jogar)  {
     
     
     //saltar quando a tecla de espaço é pressionada
-    if(keyDown("space")&& trex.y >= 100) {
+    if((touches >0)keyDown("space")&& trex.y >= 100) {
        trex.velocityY = -13;
       //3 - Atribuir o SomSalto 
       somSalto.play()
